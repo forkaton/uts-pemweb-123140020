@@ -12,7 +12,6 @@ export default function DataTable({ movies, loading, error, onMovieSelect }) {
     return <p>Silakan mulai pencarian film di atas.</p>;
   }
 
-  // HAPUS 'border' dan 'style' dari <table>
   return (
     <table>
       <thead>
@@ -25,7 +24,6 @@ export default function DataTable({ movies, loading, error, onMovieSelect }) {
       </thead>
       <tbody>
         {movies.map(movie => (
-          // HAPUS 'style' dari <tr>
           <tr 
             key={movie.imdbID} 
             onClick={() => onMovieSelect(movie.imdbID)} 
@@ -35,9 +33,9 @@ export default function DataTable({ movies, loading, error, onMovieSelect }) {
                 <img src={movie.Poster} alt={movie.Title} width="50" /> : 
                 "No Poster"}
             </td>
-            <td>{movie.Title}</td>
-            <td>{movie.Year}</td>
-            <td>{movie.imdbID}</td>
+            <td data-label="Judul">{movie.Title}</td>
+            <td data-label="Tahun">{movie.Year}</td>
+            <td data-label="imdbID">{movie.imdbID}</td>
           </tr>
         ))}
       </tbody>
