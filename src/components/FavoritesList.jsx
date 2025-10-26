@@ -16,8 +16,13 @@ export default function FavoritesList({ favorites, onRemoveFavorite }) {
                 alt={movie.Title} 
               />
               <p>{movie.Title}</p>
-              <button onClick={() => onRemoveFavorite(movie.imdbID)}>
+              <button 
+                onClick={() => onRemoveFavorite(movie.imdbID)}
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '5px' }}
+                title="Hapus dari Favorit"
+              >
                 <FaTrash />
+                Remove
               </button>
             </div>
           ))}

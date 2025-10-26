@@ -261,10 +261,11 @@ table tbody tr:hover {
     grid-template-rows: auto auto;
     grid-column-gap: 15px;
     background-color: var(--bg-dark-void);
-    border: 1px solid var(--border-glow);
-    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    border-radius: 12px; 
     margin-bottom: 15px;
     padding: 12px;
+    overflow: hidden; 
   }
 
   table td {
