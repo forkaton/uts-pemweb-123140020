@@ -36,8 +36,9 @@ export default function DetailCard({ movieId, onAddFavorite }) {
 
   if (loading) return <p>Loading detail film...</p>;
   if (error) return <p>Error: {error}</p>;
+  
   if (!movie) {
-    return <p>Klik salah satu film di tabel untuk melihat detailnya.</p>;
+    return null;
   }
 
   return (

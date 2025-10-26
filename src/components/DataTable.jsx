@@ -8,7 +8,7 @@ export default function DataTable({ movies, loading, error, onMovieSelect }) {
   }
   
   if (movies.length === 0) {
-    return <p>Silakan mulai pencarian film di atas.</p>;
+    return null;
   }
 
   return (

@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
-/*saya pakai import ini untuk meningkatkan design styling css dan sesuai keperluan saya */
+/*import font Radjhani yang saya ambil dari google fonts*/
 
 :root {
-  --bg-dark-void: #0d0c22;
-  --bg-card: #1a193d;
-  --neon-blue: #00f0ff;
-  --neon-pink: #ff00ff;
-  --text-light: #e0e0e0;
+  --bg-dark-void: #100f1c;
+  --bg-card: #1d1b36;
+  --neon-purple: #9f5fff;
+  --neon-light: #e3d0ff;
   --text-muted: #8a8a9e;
-  --border-glow: rgba(0, 240, 255, 0.3);
+  --border-glow: rgba(159, 95, 255, 0.3);
+  --border-glow-hover: rgba(159, 95, 255, 0.7);
 
-  font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Rajdhani', -apple-system, sans-serif;
 }
 
 body {
   margin: 0;
   background-color: var(--bg-dark-void);
-  color: var(--text-light);
+  color: var(--neon-light);
 }
 
 .App {
@@ -26,26 +26,18 @@ body {
   background-color: var(--bg-card);
   border: 1px solid var(--border-glow);
   border-radius: 12px;
-  box-shadow: 0 0 30px rgba(0, 240, 255, 0.15);
+  box-shadow: 0 0 30px rgba(159, 95, 255, 0.15);
   display: flex;
   flex-direction: column;
   gap: 30px;
-}
-
-header {
-  text-align: center;
-  border-bottom: 2px solid var(--border-glow);
-  padding-bottom: 20px;
 }
 
 header h1 {
   margin: 0;
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--neon-pink);
-  text-shadow: 0 0 5px #fff,
-               0 0 10px var(--neon-pink),
-               0 0 15px var(--neon-pink);
+  color: var(--neon-light);
+  text-shadow: 0 0 8px var(--neon-purple);
 }
 
 form {
@@ -60,7 +52,7 @@ form input {
   border: 1px solid var(--border-glow);
   border-radius: 8px;
   font-size: 1rem;
-  color: var(--text-light);
+  color: var(--neon-light);
   font-family: 'Rajdhani', sans-serif;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -71,15 +63,15 @@ form input::placeholder {
 
 form input:focus {
   outline: none;
-  border-color: var(--neon-blue);
-  box-shadow: 0 0 10px var(--neon-blue);
+  border-color: var(--neon-purple);
+  box-shadow: 0 0 10px var(--neon-purple);
 }
 
 button,
 form button, 
 .detail-card button {
   padding: 12px 20px;
-  background-color: var(--neon-blue);
+  background-color: var(--neon-purple);
   color: var(--bg-dark-void);
   border: none;
   border-radius: 8px;
@@ -94,9 +86,9 @@ form button,
 button:hover,
 form button:hover, 
 .detail-card button:hover {
-  background-color: #fff;
-  color: var(--neon-blue);
-  box-shadow: 0 0 20px var(--neon-blue);
+  background-color: var(--neon-light);
+  color: var(--neon-purple);
+  box-shadow: 0 0 20px var(--neon-light);
   transform: translateY(-2px);
 }
 
@@ -118,7 +110,7 @@ table th {
   background-color: var(--bg-card);
   font-size: 1rem;
   text-transform: uppercase;
-  color: var(--neon-blue);
+  color: var(--neon-purple);
 }
 
 table tr:last-child td {
@@ -130,7 +122,7 @@ table tbody tr {
   transition: background-color 0.2s ease;
 }
 table tbody tr:hover {
-  background-color: rgba(0, 240, 255, 0.05);
+  background-color: rgba(159, 95, 255, 0.05);
 }
 
 .detail-card {
@@ -142,7 +134,7 @@ table tbody tr:hover {
 
 .detail-card h2 {
   margin-top: 0;
-  color: var(--neon-blue);
+  color: var(--neon-light);
 }
 
 .detail-card-content {
@@ -160,10 +152,10 @@ table tbody tr:hover {
 
 .detail-card p {
   line-height: 1.6;
-  color: var(--text-light);
+  color: var(--neon-light);
 }
 .detail-card p strong {
-  color: var(--neon-blue);
+  color: var(--neon-purple);
 }
 
 .favorites-grid {
@@ -183,8 +175,8 @@ table tbody tr:hover {
 
 .favorite-card:hover {
   transform: translateY(-5px);
-  border-color: var(--neon-pink);
-  box-shadow: 0 5px 15px rgba(240, 0, 255, 0.2);
+  border-color: var(--neon-purple);
+  box-shadow: 0 5px 15px rgba(159, 95, 255, 0.2);
 }
 
 .favorite-card img {
@@ -198,22 +190,31 @@ table tbody tr:hover {
   font-weight: 600;
   font-size: 1rem;
   margin-top: 10px;
-  color: var(--text-light);
 }
 
 .favorite-card button {
   width: 100%;
   padding: 8px;
   margin-top: 10px;
-  background-color: var(--neon-pink);
-  color: var(--bg-card);
+  background-color: transparent;
+  color: var(--neon-purple);
+  border: 1px solid var(--neon-purple);
   font-size: 0.9rem;
 }
 
 .favorite-card button:hover {
-  background-color: #fff;
-  color: var(--neon-pink);
-  box-shadow: 0 0 20px var(--neon-pink);
+  background-color: var(--neon-purple);
+  color: var(--bg-dark-void);
+  box-shadow: 0 0 10px var(--neon-purple);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-glow);
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
 
 @media (max-width: 600px) {
@@ -225,18 +226,18 @@ table tbody tr:hover {
   form {
     flex-direction: column;
   }
-  
+
   table th:nth-child(1), 
   table td:nth-child(1),
   table th:nth-child(4), 
   table td:nth-child(4) {
     display: none;
   }
-  
+
   table th {
     display: none;
   }
-  
+
   table tr {
     display: block;
     border: 1px solid var(--border-glow);
@@ -256,7 +257,7 @@ table tbody tr:hover {
     float: left;
     font-weight: bold;
     text-transform: uppercase;
-    color: var(--neon-blue);
+    color: var(--neon-purple);
   }
 
   .detail-card-content {
