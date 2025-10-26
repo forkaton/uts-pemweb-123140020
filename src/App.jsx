@@ -55,7 +55,7 @@ function App() {
         onMovieSelect={handleMovieSelect} 
       />
       
-      <DetailCard />
+      <DetailCard movieId={selectedMovieId} />
       <FavoritesList />
     </div>
   );
