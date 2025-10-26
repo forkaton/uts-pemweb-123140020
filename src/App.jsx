@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+import { useState } from 'react'; // Import useState
+import './App.css';
+import Header from './components/Header';
+import SearchForm from './components/SearchForm';
+import DataTable from './components/DataTable';
+import DetailCard from './components/DetailCard';
+import FavoritesList from './components/FavoritesList';
 
 function App() {
-  const [count, setCount] = useState(0)
+  // State untuk data
+  const [movies, setMovies] = useState([]);
+  const [selectedMovieId, setSelectedMovieId] = useState(null);
+
+  // State untuk UI
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  // Fungsi ini akan kita kirim ke SearchForm
+  const handleSearch = (searchTerm, year) => {
+    console.log("Mencari:", searchTerm, "Tahun:", year);
+    // Logika API akan masuk di sini nanti
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="App">
+      <Header />
+      {/* Kirim fungsi handleSearch sebagai props */}
+      <SearchForm onSearch={handleSearch} />
+      <DataTable />
+      <DetailCard />
+      <FavoritesList />
+    </div>
+  );
 }
-
-export default App
+export default App;
