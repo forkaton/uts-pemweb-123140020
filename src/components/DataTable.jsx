@@ -1,15 +1,7 @@
 export default function DataTable({ movies, loading, error, onMovieSelect }) {
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-  
-  if (error) {
-    return <p>Error: {error}</p>;
-  }
-  
-  if (movies.length === 0) {
-    return null;
-  }
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
+  if (movies.length === 0) return null;
 
   return (
     <table>
@@ -18,7 +10,6 @@ export default function DataTable({ movies, loading, error, onMovieSelect }) {
           <th>Poster</th>
           <th>Judul</th>
           <th>Tahun</th>
-          <th>Detail (imdbID)</th>
         </tr>
       </thead>
       <tbody>
@@ -34,7 +25,6 @@ export default function DataTable({ movies, loading, error, onMovieSelect }) {
             </td>
             <td data-label="Judul">{movie.Title}</td>
             <td data-label="Tahun">{movie.Year}</td>
-            <td data-label="imdbID">{movie.imdbID}</td>
           </tr>
         ))}
       </tbody>
