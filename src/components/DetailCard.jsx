@@ -6,7 +6,7 @@ import axios from 'axios';
 const API_KEY = import.meta.env.VITE_API_KEY;
 
 // 1. Terima 'props' { movieId } dari App.jsx
-export default function DetailCard({ movieId }) {
+export default function DetailCard({ movieId, onAddFavorite }) {
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -67,6 +67,9 @@ export default function DetailCard({ movieId }) {
       <p><strong>Rating:</strong> {movie.imdbRating}</p>
       <p><strong>Plot:</strong> {movie.Plot}</p>
       <p><strong>Aktor:</strong> {movie.Actors}</p>
+      <button onClick={() => onAddFavorite(movie)}>
+        Tambah ke Favorit
+      </button>
       {/* Kita akan tambahkan tombol 'Favorite' di sini nanti */}
     </div>
   );
