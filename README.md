@@ -1,16 +1,33 @@
-# React + Vite
+# UTS Pemrograman Web - Movie Database Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplikasi React untuk mencari film menggunakan OMDb API.
 
-Currently, two official plugins are available:
+**Nama:** Anselmus Herpin Hasugian
+**NIM:** 123140020
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Link Deployment
 
-## React Compiler
+Aplikasi dapat diakses di: [https://uts-pemweb-123140020.vercel.app]
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Fitur
 
-## Expanding the ESLint configuration
+* Pencarian film berdasarkan judul dan tahun.
+* Menampilkan hasil dalam tabel yang responsif.
+* Menampilkan detail film saat hasil diklik.
+* Menambahkan dan menghapus film dari daftar favorit.
+* Daftar favorit disimpan di `localStorage` (tidak hilang saat refresh).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Cara Instalasi
+
+1.  Clone repository: `git clone https://github.com/NAMA_ANDA/uts-pemweb-123140020.git`
+2.  Masuk ke direktori: `cd uts-pemweb-123140020`
+3.  Install dependencies: `npm install`
+4.  Buat file `.env.local` di root folder.
+5.  Isi file `.env.local` dengan API Key OMDb: `VITE_API_KEY=6908bd1f `
+6.  Jalankan aplikasi: `npm run dev`
+
+## Screenshot Aplikasi
+
+![Screenshot Desktop](interfaceawal.png)
+
+![Screenshot Mobile](link_ke_screenshot_mobile.png)
