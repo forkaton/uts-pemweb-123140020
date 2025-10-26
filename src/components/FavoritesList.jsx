@@ -1,6 +1,8 @@
+import { FaTrash } from 'react-icons/fa';
+
 export default function FavoritesList({ favorites, onRemoveFavorite }) {
   return (
-    <div style={{ marginTop: '30px', borderTop: '2px solid #eee', paddingTop: '20px' }}>
+    <div>
       <h3>Film Favorit Saya</h3>
 
       {favorites.length === 0 ? (
@@ -15,7 +17,7 @@ export default function FavoritesList({ favorites, onRemoveFavorite }) {
               />
               <p>{movie.Title}</p>
               <button onClick={() => onRemoveFavorite(movie.imdbID)}>
-                Hapus
+                <FaTrash />
               </button>
             </div>
           ))}

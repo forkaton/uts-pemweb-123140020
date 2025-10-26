@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { FaHeart } from 'react-icons/fa';
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 
@@ -52,7 +53,8 @@ export default function DetailCard({ movieId, onAddFavorite }) {
           <p><strong>Rating:</strong> {movie.imdbRating}</p>
           <p><strong>Plot:</strong> {movie.Plot}</p>
           <p><strong>Aktor:</strong> {movie.Actors}</p>
-          <button onClick={() => onAddFavorite(movie)}>
+          <button onClick={() => onAddFavorite(movie)} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <FaHeart />
             Tambah ke Favorit
           </button>
         </div>

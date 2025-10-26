@@ -1,7 +1,17 @@
+import TableSkeleton from './TableSkeleton';
+
 export default function DataTable({ movies, loading, error, onMovieSelect }) {
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
-  if (movies.length === 0) return null;
+  if (loading) {
+    return <TableSkeleton />;
+  }
+  
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
+  
+  if (movies.length === 0) {
+    return null;
+  }
 
   return (
     <table>

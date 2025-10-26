@@ -7,6 +7,7 @@ import DataTable from './components/DataTable';
 import DetailCard from './components/DetailCard';
 import FavoritesList from './components/FavoritesList';
 import Footer from './components/Footer';
+import Modal from './components/Modal';
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 
@@ -73,10 +74,16 @@ function App() {
         error={error}
         onMovieSelect={handleMovieSelect} 
       />
-      <DetailCard 
-        movieId={selectedMovieId} 
-        onAddFavorite={addFavorite}
-      />
+      
+      {selectedMovieId && (
+        <Modal onClose={() => setSelectedMovieId(null)}>
+          <DetailCard 
+            movieId={selectedMovieId} 
+            onAddFavorite={addFavorite}
+          />
+        </Modal>
+      )}
+      
       <FavoritesList 
         favorites={favorites}
         onRemoveFavorite={removeFavorite}

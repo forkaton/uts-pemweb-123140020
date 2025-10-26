@@ -1,33 +1,35 @@
-// src/components/SearchForm.jsx
 import { useState } from 'react';
+import { FaSearch } from 'react-icons/fa';
 
-// Terima props 'onSearch' dari App.jsx
 export default function SearchForm({ onSearch }) {
   const [term, setTerm] = useState('');
   const [year, setYear] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Mencegah refresh halaman
-    onSearch(term, year); // Kirim data ke App.jsx
+    e.preventDefault();
+    onSearch(term, year);
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ margin: '20px' }}>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Cari film (cth: Batman)"
         value={term}
         onChange={(e) => setTerm(e.target.value)}
-        required // Validasi HTML5
+        required
       />
       <input
         type="number"
         placeholder="Tahun (cth: 2008)"
         value={year}
         onChange={(e) => setYear(e.target.value)}
-        min="1888" // Validasi HTML5
+        min="1888"
       />
-      <button type="submit">Cari</button>
+      <button type="submit" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <FaSearch />
+        Cari
+      </button>
     </form>
   );
 }
