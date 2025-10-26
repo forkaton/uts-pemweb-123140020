@@ -1,5 +1,4 @@
 export default function DataTable({ movies, loading, error, onMovieSelect }) {
-  
   if (loading) {
     return <p>Loading...</p>;
   }
