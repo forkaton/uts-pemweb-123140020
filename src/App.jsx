@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios'; // <-- BARIS BARU
 import './App.css';
 import Header from './components/Header';
@@ -15,6 +15,16 @@ function App() {
   const [selectedMovieId, setSelectedMovieId] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  // 1. Inisialisasi 'favorites' dari localStorage
+  const [favorites, setFavorites] = useState(() => {
+    const savedFavorites = localStorage.getItem('movieFavorites');
+    return savedFavorites ? JSON.parse(savedFavorites) : [];
+  });
+
+  // 2. useEffect untuk MENYIMPAN ke localStorage setiap 'favorites' berubah
+  useEffect(() => {
+    localStorage.setItem('movieFavorites', JSON.stringify(favorites));
+  }, [favorites]); // "Awasi" variabel favorites
 
   // Fungsi handleSearch diisi dengan logika API
   const handleSearch = async (term, year) => { // <-- FUNGSI INI DIUBAH
@@ -42,6 +52,20 @@ function App() {
     setSelectedMovieId(id);
   };
 
+  const addFavorite = (movie) => {
+    // Cek agar tidak duplikat
+    if (!favorites.find(fav => fav.imdbID === movie.imdbID)) {
+      setFavorites([...favorites, movie]);
+    } else {
+      alert('Film ini sudah ada di favorit!');
+    }
+  };
+
+  // 4. Fungsi untuk menghapus favorit
+  const removeFavorite = (id) => {
+    setFavorites(favorites.filter(fav => fav.imdbID !== id));
+  };
+
   return (
     <div className="App">
       <Header />
@@ -55,8 +79,14 @@ function App() {
         onMovieSelect={handleMovieSelect} 
       />
       
-      <DetailCard movieId={selectedMovieId} />
-      <FavoritesList />
+      <DetailCard 
+        movieId={selectedMovieId} 
+        onAddFavorite={addFavorite} // <-- TAMBAHKAN PROPS INI
+      />
+      <FavoritesList 
+        favorites={favorites} // <-- TAMBAHKAN PROPS INI
+        onRemoveFavorite={removeFavorite} // <-- TAMBAHKAN PROPS INI
+      />
     </div>
   );
 }
