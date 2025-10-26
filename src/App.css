@@ -230,6 +230,23 @@ table tbody tr:hover {
   font-size: 0.9rem;
 }
 
+.poster-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-dark-void); /* Warna background gelap */
+  color: var(--text-muted); /* Warna ikon abu-abu */
+  width: 100%;
+  height: 100%;
+  border-radius: 4px; /* Samakan dengan radius gambar */
+  overflow: hidden; /* Pastikan ikon tidak keluar */
+}
+
+.poster-placeholder svg {
+  font-size: 2.5rem; /* Ukuran ikon */
+  opacity: 0.5; /* Sedikit transparan */
+}
+
 @media (max-width: 600px) {
   .App {
     padding: 16px;

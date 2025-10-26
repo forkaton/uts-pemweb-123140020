@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { FaHeart } from 'react-icons/fa';
+import { FaHeart, FaFilm } from 'react-icons/fa'; // Import FaFilm
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 
@@ -47,7 +47,14 @@ export default function DetailCard({ movieId, onAddFavorite }) {
       <h2>{movie.Title} ({movie.Year})</h2>
       
       <div className="detail-card-content"> 
-        <img src={movie.Poster !== "N/A" ? movie.Poster : "No Poster"} alt={movie.Title} />
+        {/* Modifikasi bagian gambar ini */}
+        {movie.Poster !== "N/A" ? (
+          <img src={movie.Poster} alt={movie.Title} />
+        ) : (
+          <div className="poster-placeholder" style={{width: '150px', height: '220px'}}>
+             <FaFilm />
+          </div>
+        )}
         
         <div> 
           <p><strong>Rating:</strong> {movie.imdbRating}</p>
