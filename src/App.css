@@ -342,6 +342,7 @@ table tbody tr:hover {
   }
 }
 
+/*animasi rgb (glitch) untuk header */
 @keyframes glitch {
   0%, 10% { clip-path: inset(8% 0 73% 0); }
   20%, 30% { clip-path: inset(80% 0 4% 0); }

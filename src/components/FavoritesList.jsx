@@ -1,4 +1,4 @@
-import { FaTrash, FaFilm } from 'react-icons/fa'; // Import FaFilm
+import { FaTrash, FaFilm } from 'react-icons/fa'; 
 
 export default function FavoritesList({ favorites, onRemoveFavorite }) {
   return (
@@ -11,7 +11,6 @@ export default function FavoritesList({ favorites, onRemoveFavorite }) {
         <div className="favorites-grid">
           {favorites.map(movie => (
             <div key={movie.imdbID} className="favorite-card">
-              {/* Modifikasi bagian gambar ini */}
               {movie.Poster !== "N/A" ? (
                 <img 
                   src={movie.Poster} 

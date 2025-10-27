@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { FaHeart, FaFilm } from 'react-icons/fa'; // Import FaFilm
+import { FaHeart, FaFilm } from 'react-icons/fa'; 
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 
