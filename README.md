@@ -37,60 +37,57 @@ Aplikasi dapat diakses di: [https://uts-pemweb-123140020.vercel.app]
 
 **2. Hasil Pencarian Film Attack on Titan dengan Tahun 2015**
 ![Screenshot Desktop 2](./desktop2.png)
-
 <br>
 
 **3. Detail Card / Modal Hasil Pencarian dan Tambah ke Favorit**
 ![Screenshot Desktop 3](./desktop3.png)
-
 <br>
 
 **4. Setelah di Tambahkan ke Favorit dan disimpan ke LocalStorage**
 ![Screenshot Desktop 4](./desktop4.png)
-
 <br>
 
 **5. Konfirmasi Remove Film dari Daftar Favorit**
 ![Screenshot Desktop 5](./desktop5.png)
-
 <br>
 
 **6. Detail Card / Modal dari FavoriteList dengan Opsi Remove**
 ![Screenshot Desktop 6](./desktop6.png)
-
 <br>
 
 ### Screenshot Mobile
 
 **1. Halaman Utama Movie Database Explorer versi Mobile**
-<img src="./mobile1.jpg" alt="Screenshot Mobile 1" width="400"/>
-
 <br>
+<img src="./mobile1.jpg" alt="Screenshot Mobile 1" width="300"/>
+<br><br>
 
 **2. Hasil Pencarian Demon Slayer dengan Tahun 2021**
-<img src="./mobile2.jpg" alt="Screenshot Mobile 2" width="400"/>
-
 <br>
+<img src="./mobile2.jpg" alt="Screenshot Mobile 2" width="300"/>
+<br><br>
 
 **3. Detail Card / Modal Hasil Pencarian**
-<img src="./mobile3.jpg" alt="Screenshot Mobile 3" width="400"/>
-
 <br>
+<img src="./mobile3.jpg" alt="Screenshot Mobile 3" width="300"/>
+<br><br>
 
 **4. Film Ditambahkan ke Favorit dan Disimpan ke LocalStorage**
-<img src="./mobile4.jpg" alt="Screenshot Mobile 4" width="400"/>
-
 <br>
+<img src="./mobile4.jpg" alt="Screenshot Mobile 4" width="300"/>
+<br><br>
 
 **5. Konfirmasi Remove Film dari Daftar Favorit**
-<img src="./mobile5.jpg" alt="Screenshot Mobile 5" width="400"/>
-
 <br>
+<img src="./mobile5.jpg" alt="Screenshot Mobile 5" width="300"/>
+<br><br>
 
 **6. Daftar Film Favorit pada Versi Mobile**
-<img src="./mobile6.jpg" alt="Screenshot Mobile 6" width="400"/>
-
 <br>
+<img src="./mobile6.jpg" alt="Screenshot Mobile 6" width="300"/>
+<br><br>
 
 **7. Konfirmasi Remove Film dari ListFavorite**
-<img src="./mobile7.jpg" alt="Screenshot Mobile 7" width="400"/>
+<br>
+<img src="./mobile7.jpg" alt="Screenshot Mobile 7" width="300"/>
+<br><br>
