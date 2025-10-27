@@ -95,7 +95,22 @@ form input:focus {
   outline: none;
   border-color: var(--neon-purple);
   box-shadow: 0 0 10px var(--neon-purple);
+  background-color: var(--bg-dark-void);
 }
+
+/* --- Perbaikan Autofill --- */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--bg-dark-void) inset !important;
+  box-shadow: 0 0 0 30px var(--bg-dark-void) inset !important;
+  -webkit-text-fill-color: var(--neon-light) !important;
+  caret-color: var(--neon-light) !important;
+  border: 1px solid var(--border-glow) !important; /* Jaga border */
+  transition: background-color 5000s ease-in-out 0s;
+}
+/* --- Akhir Perbaikan Autofill --- */
 
 button,
 form button,

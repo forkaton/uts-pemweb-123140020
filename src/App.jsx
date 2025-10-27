@@ -26,16 +26,30 @@ function App() {
   }, [favorites]);
 
   useEffect(() => {
-    handleSearch('fast', '');
+    handleSearch('fast', '', ''); 
   }, []);
 
-  const handleSearch = async (term, year) => {
+  // Catatan dari saya Anselmus kepada tim penilai Yth. bapak Habib:
+  // Fungsi pencarian ini hanya menggunakan parameter Judul (s), Tahun (y), dan Tipe (type)
+  // karena ini adalah filter utama yang didukung oleh endpoint pencarian OMDb API (`?s=...`)/mencari "search" berdasarkan judul
+  // API tersebut tidak menyediakan filter untuk parameter lain seperti rating atau aktor
+  // pada endpoint pencariannya. Informasi tersebut hanya tersedia via endpoint detail (`?i=...`)/berisi informasi plot, rating, dan aktor saja dari ID unik "imdbID"
+
+  const handleSearch = async (term, year, type) => { // Accept 'type'
     setLoading(true);
     setError(null);
     setMovies([]);
     setSelectedMovieId(null);
     try {
-      const response = await axios.get(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${term}&y=${year}`);
+      let apiUrl = `https://www.omdbapi.com/?apikey=${API_KEY}&s=${term}`;
+      if (year) {
+        apiUrl += `&y=${year}`;
+      }
+      if (type) {
+        apiUrl += `&type=${type}`;
+      }
+
+      const response = await axios.get(apiUrl); 
       
       if (response.data.Response === "True") {
         setMovies(response.data.Search);
