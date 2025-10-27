@@ -91,3 +91,7 @@ Aplikasi dapat diakses di: [https://uts-pemweb-123140020.vercel.app]
 <br>
 <img src="./mobile7.jpg" alt="Screenshot Mobile 7" width="300"/>
 <br><br>
+
+## Screenshot Console Bebas Error ataupun Issues
+
+![Screenshot Console](./bukticonsole.png)
