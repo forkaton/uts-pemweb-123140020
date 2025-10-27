@@ -18,6 +18,8 @@ export default function SearchForm({ onSearch }) {
         value={term}
         onChange={(e) => setTerm(e.target.value)}
         required
+        id="movieTitle"  
+        name="movieTitle" 
       />
       <input
         type="number"
@@ -25,6 +27,8 @@ export default function SearchForm({ onSearch }) {
         value={year}
         onChange={(e) => setYear(e.target.value)}
         min="1888"
+        id="movieYear"   
+        name="movieYear" 
       />
       <button type="submit" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
         <FaSearch />
