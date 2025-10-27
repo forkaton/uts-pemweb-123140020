@@ -19,7 +19,7 @@ Aplikasi dapat diakses di: [https://uts-pemweb-123140020.vercel.app]
 
 ## Cara Instalasi
 
-1.  Clone repository: `git clone https://github.com/NAMA_ANDA/uts-pemweb-123140020.git`
+1.  Clone repository: `git clone https://github.com/forkaton/uts-pemweb-123140020.git`
 2.  Masuk ke direktori: `cd uts-pemweb-123140020`
 3.  Install dependencies: `npm install`
 4.  Buat file `.env.local` di root folder.
@@ -29,31 +29,68 @@ Aplikasi dapat diakses di: [https://uts-pemweb-123140020.vercel.app]
 ## Screenshot Aplikasi
 
 ### Screenshot Desktop
-1. Halaman Utama Movie Database Exploler versi Desktop
+
+**1. Halaman Utama Movie Database Explorer versi Desktop**
 ![Screenshot Desktop 1](./desktop1.png)
-2. Hasil Pencarian Film Attack on Titan dengan Tahun 2015
+
+<br>
+
+**2. Hasil Pencarian Film Attack on Titan dengan Tahun 2015**
 ![Screenshot Desktop 2](./desktop2.png)
-3. Detail Card / Modal Hasil Pencarian dan Tambah ke Favorit
+
+<br>
+
+**3. Detail Card / Modal Hasil Pencarian dan Tambah ke Favorit**
 ![Screenshot Desktop 3](./desktop3.png)
-4. Setelah di Tambahkan ke Favorit dan disimpan ke Localstorage 
+
+<br>
+
+**4. Setelah di Tambahkan ke Favorit dan disimpan ke LocalStorage**
 ![Screenshot Desktop 4](./desktop4.png)
-5. Setelah di Tambahkan ke Favorit, Film dapat diremove dan ada Konfirmasi untuk Remove
+
+<br>
+
+**5. Konfirmasi Remove Film dari Daftar Favorit**
 ![Screenshot Desktop 5](./desktop5.png)
-6. Detail Card / Modal dapat dibuka dari Favoritelist dan dapat di Remove dari FavoriteList
+
+<br>
+
+**6. Detail Card / Modal dari FavoriteList dengan Opsi Remove**
 ![Screenshot Desktop 6](./desktop6.png)
 
+<br>
+
 ### Screenshot Mobile
-1. Halaman Utama Movie Database Exploler versi Mobile
-![Screenshot Mobile 1](./mobile1.jpg)
-2. Hasil Pencarian Demon Slayer dengan Tahun 2021
-![Screenshot Mobile 2](./mobile2.jpg)
-3. Detail Card / Modal Hasil Pencarian
-![Screenshot Mobile 3](./mobile3.jpg)
-4. Film ditambahkan ke Favorit dan disimpan ke Localstorage (Dapat di Remove)
-![Screenshot Mobile 4](./mobile4.jpg)
-5. Film yang telah ditambahkan ke Listfavorite dapat di Remove dan Harus dikonfirmasi Terlebih Dahulu
-![Screenshot Mobile 5](./mobile5.jpg)
-6. Film yang telah ditambahkan ke Listfavorite Berada dipaling Bawah untuk versi Mobile
-![Screenshot Mobile 6](./mobile6.jpg)
-7. Film dapat di Remove dari ListFavorite dan Harus dikonfirmasi Terlebih Dahulu
-![Screenshot Mobile 7](./mobile7.jpg)
+
+**1. Halaman Utama Movie Database Explorer versi Mobile**
+<img src="./mobile1.jpg" alt="Screenshot Mobile 1" width="400"/>
+
+<br>
+
+**2. Hasil Pencarian Demon Slayer dengan Tahun 2021**
+<img src="./mobile2.jpg" alt="Screenshot Mobile 2" width="400"/>
+
+<br>
+
+**3. Detail Card / Modal Hasil Pencarian**
+<img src="./mobile3.jpg" alt="Screenshot Mobile 3" width="400"/>
+
+<br>
+
+**4. Film Ditambahkan ke Favorit dan Disimpan ke LocalStorage**
+<img src="./mobile4.jpg" alt="Screenshot Mobile 4" width="400"/>
+
+<br>
+
+**5. Konfirmasi Remove Film dari Daftar Favorit**
+<img src="./mobile5.jpg" alt="Screenshot Mobile 5" width="400"/>
+
+<br>
+
+**6. Daftar Film Favorit pada Versi Mobile**
+<img src="./mobile6.jpg" alt="Screenshot Mobile 6" width="400"/>
+
+<br>
+
+**7. Konfirmasi Remove Film dari ListFavorite**
+<img src="./mobile7.jpg" alt="Screenshot Mobile 7" width="400"/>
