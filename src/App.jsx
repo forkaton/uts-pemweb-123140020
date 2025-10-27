@@ -33,6 +33,7 @@ function App() {
     setLoading(true);
     setError(null);
     setMovies([]);
+    setSelectedMovieId(null);
     try {
       const response = await axios.get(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${term}&y=${year}`);
       
@@ -67,27 +68,40 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <SearchForm onSearch={handleSearch} />
-      <DataTable
-        movies={movies}
-        loading={loading}
-        error={error}
-        onMovieSelect={handleMovieSelect} 
-      />
+      
+      <div className="main-layout">
+        
+        <main className="main-content">
+          <SearchForm onSearch={handleSearch} />
+          <DataTable
+            movies={movies}
+            loading={loading}
+            error={error}
+            onMovieSelect={handleMovieSelect} 
+          />
+        </main>
+        
+        <aside className="sidebar">
+          <FavoritesList 
+            favorites={favorites}
+            onRemoveFavorite={removeFavorite}
+            onFavoriteSelect={handleMovieSelect}
+          />
+        </aside>
+        
+      </div> 
       
       {selectedMovieId && (
         <Modal onClose={() => setSelectedMovieId(null)}>
           <DetailCard 
             movieId={selectedMovieId} 
             onAddFavorite={addFavorite}
+            onRemoveFavorite={removeFavorite}
+            favorites={favorites}
           />
         </Modal>
       )}
       
-      <FavoritesList 
-        favorites={favorites}
-        onRemoveFavorite={removeFavorite}
-      />
       <Footer />
     </div>
   );
