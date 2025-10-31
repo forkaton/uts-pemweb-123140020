@@ -3,6 +3,8 @@
 Aplikasi React untuk mencari film menggunakan OMDb API.
 
 **Nama:** Anselmus Herpin Hasugian
+<br>
+
 **NIM:** 123140020
 
 ## Link Deployment
@@ -11,11 +13,11 @@ Aplikasi dapat diakses di: [https://uts-pemweb-123140020.vercel.app]
 
 ## Fitur
 
-* Pencarian film berdasarkan judul dan tahun.
+* Pencarian film berdasarkan judul, tahun, dan tipe.
 * Menampilkan hasil dalam tabel yang responsif.
 * Menampilkan detail film saat hasil diklik.
-* Menambahkan dan menghapus film dari daftar favorit.
-* Daftar favorit disimpan di `localStorage` (tidak hilang saat refresh).
+* Menambahkan dan menghapus film dari daftar favorit, dan konfirmasi untuk menghapus.
+* Daftar favorit disimpan di `localStorage` (sehingga tidak hilang saat refresh).
 
 ## Cara Instalasi
 
