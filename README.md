@@ -2,14 +2,18 @@
 
 Aplikasi React untuk mencari film menggunakan OMDb API.
 
-**Nama:** Anselmus Herpin Hasugian
-<br>
+---
 
+**Nama:** Anselmus Herpin Hasugian
 **NIM:** 123140020
+
+---
 
 ## Link Deployment
 
 Aplikasi dapat diakses di: [https://uts-pemweb-123140020.vercel.app]
+
+---
 
 ## Fitur
 
@@ -19,6 +23,8 @@ Aplikasi dapat diakses di: [https://uts-pemweb-123140020.vercel.app]
 * Menambahkan dan menghapus film dari daftar favorit, dan konfirmasi untuk menghapus.
 * Daftar favorit disimpan di `localStorage` (sehingga tidak hilang saat refresh).
 
+---
+
 ## Cara Instalasi
 
 1.  Clone repository: `git clone https://github.com/forkaton/uts-pemweb-123140020.git`
@@ -27,6 +33,8 @@ Aplikasi dapat diakses di: [https://uts-pemweb-123140020.vercel.app]
 4.  Buat file `.env.local` di root folder.
 5.  Isi file `.env.local` dengan API Key OMDb: `VITE_API_KEY=6908bd1f `
 6.  Jalankan aplikasi: `npm run dev`
+
+---
 
 ## Screenshot Aplikasi
 
@@ -56,6 +64,8 @@ Aplikasi dapat diakses di: [https://uts-pemweb-123140020.vercel.app]
 **6. Detail Card / Modal dari FavoriteList dengan Opsi Remove**
 ![Screenshot Desktop 6](./desktop6.png)
 <br>
+
+---
 
 ### Screenshot Mobile
 
@@ -93,6 +103,8 @@ Aplikasi dapat diakses di: [https://uts-pemweb-123140020.vercel.app]
 <br>
 <img src="./mobile7.jpg" alt="Screenshot Mobile 7" width="300"/>
 <br><br>
+
+---
 
 ## Screenshot Console Bebas Error ataupun Issues
 
