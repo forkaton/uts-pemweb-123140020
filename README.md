@@ -32,7 +32,7 @@ Aplikasi dapat diakses di: [https://uts-pemweb-123140020.vercel.app](https://uts
 
 1.  **Clone repository:**
     ```bash
-    git clone [https://github.com/forkaton/uts-pemweb-123140020.git](https://github.com/forkaton/uts-pemweb-123140020.git)
+    git clone https://github.com/forkaton/uts-pemweb-123140020.git
     ```
 2.  **Masuk ke direktori:**
     ```bash
@@ -43,11 +43,13 @@ Aplikasi dapat diakses di: [https://uts-pemweb-123140020.vercel.app](https://uts
     npm install
     ```
 4.  **Dapatkan API Key OMDb:**
-    * Kunjungi [**https://www.omdbapi.com/apikey.aspx**](https://www.omdbapi.com/apikey.aspx)
+    * Kunjungi [**website OMDb API**](https://www.omdbapi.com/apikey.aspx)
     * Pilih opsi "FREE" dan daftarkan email Anda.
     * Cek email Anda (termasuk folder Spam) untuk mendapatkan API Key unik Anda.
+
 5.  **Buat file Environment:**
     * Buat file bernama `.env.local` di folder utama proyek (sejajar dengan `package.json`).
+
 6.  **Isi file `.env.local`:**
     * Isi file tersebut dengan API Key yang baru Anda dapatkan. (Ganti `KEYOMDb` dengan key yang Anda peroleh sebelumnya).
     ```
